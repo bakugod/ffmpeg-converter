@@ -1,0 +1,19 @@
+{
+  "name": "ffmpeg",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "author": "me",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "0.0.1-security"
+  }
+}
