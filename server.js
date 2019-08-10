@@ -1,26 +1,16 @@
 const express = require('express');
-const fs = require('fs');
-const ffmpeg = require('fluent-ffmpeg');
+const { spawn, exec } = require('child_process');
 
 const PORT = 8081;
 
 const app = express();
-	app.use("/", express.static(__dirname + "/"));
-	app.get('/', (req, res) => {
-		res.sendFile(__dirname + "/index.html");
-    });
 
-ffmpeg('./input/test2.mp4')
-    .output('./output/output.mp4')
-    .noAudio()
-    .seek('0:20')
-    .on('error', function(err) {
-        console.log('An error occurred: ' + err.message);
-    })
-    .on('end', function() {
-        console.log('Processing finished !');
-    })
-    .run();
+app.use("/", express.static(__dirname + "/"));
+app.get('/', (req, res) => {
+	res.sendFile(__dirname + "/index.html");
+});
+
+exec('ffmpeg -r 1/5 -i ./input/img%03d.jpg -c:v libx264 -r 30 -pix_fmt yuv420p ./output/test.mp4',() => console.log('done'))
 
 console.log('app working on', PORT);
 app.listen(PORT)
