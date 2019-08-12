@@ -4,6 +4,7 @@ Try to video conversation maybe//
 TODO
 <ul>
   <li>get slideshow from test *.jpg data 🌕</li>
+  <li>get slideshow from test *.jpg and *.png data 🌕</li>
   <li>hook up video from frontend 🌔</li>
   <li>reactive hook up video (ws/beacon??) 🌑</li>
   <li>create sound generator 🌑</li>
