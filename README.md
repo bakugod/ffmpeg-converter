@@ -12,5 +12,3 @@ TODO
   <li>resettle build to desktop (rn/electron??) 🌑</li>
   <li>another sprint :godmode: :rage3: :godmode:</li>
 </ul>
-
-.// archived
